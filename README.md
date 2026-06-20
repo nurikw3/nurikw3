@@ -19,29 +19,27 @@ I'm a **Big Data Analysis student at Astana IT University (AITU '28)** from Kaza
 My long-term goal is to grow into a strong AI researcher and engineer — and one day contribute to the work being done at **Google DeepMind**.
 
 ```python
-class NurassylBeisenbek:
-    def __init__(self):
-        self.username = "nurikw3"
-        self.education = "Big Data Analysis @ AITU '28"
-        self.location = "Kazakhstan 🇰🇿"
-        self.status = "Learning, building, and experimenting"
+from itertools import count
 
-        self.interests = [
-            "🧠 Artificial Intelligence & Machine Learning",
-            "📊 Big Data & Data Analysis",
-            "👁️ Computer Vision",
-            "🔎 Semantic Search",
-            "🌐 Full-Stack Development",
-        ]
+north_star = embed("frontier AI research")
+trajectory = embed("Big Data @ AITU")
 
-        self.current_focus = [
-            "Building end-to-end ML applications",
-            "Deepening my knowledge of PyTorch",
-            "Turning ideas into useful products",
-        ]
+for day in count(start=1):
+    problem = observe(world=True)
+    hypothesis = question(problem)
+    experiment = build(
+        hypothesis,
+        tools=("Python", "PyTorch"),
+    )
 
-    def get_goal(self):
-        return "Learn deeply, build boldly, and aim high 🚀"
+    result = experiment.run()
+    trajectory += learn(from_=result)  # failure is data too
+
+    if result.is_useful:
+        github.push(experiment)
+
+    if similarity(trajectory, north_star) > 0.99:
+        north_star = aim_higher()
 ```
 
 ---
